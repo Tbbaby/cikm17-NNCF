@@ -52,7 +52,7 @@ def deal_with_line(line, MAX_USER_NEIGHBORS_LEN, MAX_ITEM_NEIGHBORS_LEN):
     return user, item, user2item_neighbors_vec, item2user_neighbors_vec
 
 
-def evaluate(model,MAX_USER_NEIGHBORS_LEN,MAX_ITEM_NEIGHBORS_LEN):
+def evaluate(model,MAX_USER_NEIGHBORS_LEN,MAX_ITEM_NEIGHBORS_LEN,NEG_N):
     f = open('./Data/relation_test_vec_element.txt', 'r')
     test_vec_lines = f.readlines()
     f.close()
@@ -76,7 +76,7 @@ def evaluate(model,MAX_USER_NEIGHBORS_LEN,MAX_ITEM_NEIGHBORS_LEN):
         user_item_pair.append(str(user) + '_' + str(item))
         user_vecs.append(user2item_neighbors_vec)
         item_vecs.append(item2user_neighbors_vec)
-        uninteract = uninteract_vec_lines[i * 99:(i + 1) * 99]
+        uninteract = uninteract_vec_lines[i * NEG_N:(i + 1) * NEG_N]
         for l in uninteract:
             l = l.strip()
             user, item, user2item_neighbors_vec, item2user_neighbors_vec = deal_with_line(l,MAX_USER_NEIGHBORS_LEN,MAX_ITEM_NEIGHBORS_LEN)
@@ -132,8 +132,10 @@ if __name__=="__main__":
     #MAX_ITEM_NEIGHBORS_LEN = 50
     MAX_USER_NEIGHBORS_LEN = int(sys.argv[1])
     MAX_ITEM_NEIGHBORS_LEN = int (sys.argv[1])
+	NEG_N=int (sys.argv[2])
+	
     print 'MAX_USER_NEIGHBORS_LEN: ',MAX_USER_NEIGHBORS_LEN
-    model_hr, model_ndcg = evaluate(model,MAX_USER_NEIGHBORS_LEN,MAX_ITEM_NEIGHBORS_LEN)
+    model_hr, model_ndcg = evaluate(model,MAX_USER_NEIGHBORS_LEN,MAX_ITEM_NEIGHBORS_LEN,NEG_N)
     print 'HR: ', model_hr
     print 'NDCG: ', model_ndcg
     fhr=open('./HR_result.txt','w')
