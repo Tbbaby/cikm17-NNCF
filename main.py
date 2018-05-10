@@ -41,7 +41,7 @@ def model_direct():
     call(["python", "03_prepare_vec_element.py", v2])
     call(["python", "04_construct_evaluate_vec.py", v1, v2])
     call(["python", "05_Train_Model.py", v2, v4, v5, v6,v1,v7])
-    call(["python", "06_final_model_evalution.py", v2])
+    call(["python", "06_final_model_evalution.py", v2,v1])
 
 
 def model_community():
@@ -78,7 +78,7 @@ def model_community():
     call(["python", "03-1_prepare_vec_element_community.py", v2, v7])
     call(["python", "04-1_construct_evaluate_vec_community.py", v1, v2, v7])
     call(["python", "05_Train_Model.py", v2, v4, v5, v6, v1,v8])
-    call(["python", "06_final_model_evalution.py", v2])
+    call(["python", "06_final_model_evalution.py", v2,v1])
 
 
 def model_knn():
@@ -110,7 +110,7 @@ def model_knn():
     call(["python", "02_split_train_test_relation.py", v3])
     call(["python", "03-2_prepare_vec_element_nn.py", v1, v2])
     call(["python", "05_Train_Model.py", v2, v4, v5, v6, v1,v7])
-    call(["python", "06_final_model_evalution.py", v2])
+    call(["python", "06_final_model_evalution.py", v2,v1])
 
 
 if __name__ == '__main__':
