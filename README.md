@@ -1,29 +1,29 @@
 # cikm17-NNCF
+
 Implementation of Neighborhood-based Neural Collaborative Filtering model (NNCF)
 
 Ting Bai et al. "A Neural Collaborative Filtering Model with Interaction-based Neighborhood." Proceedings of the 2017 ACM on Conference on Information and Knowledge Management. ACM, 2017.
 
-==========Run the model: python main.py===========
+## Run the model: python main.py
 
-Take Rossmann for example
 
 Parameters:
 
-N_test_negative(99): the number of negative samples in the testing ranking list
+N_test_negative: the number of negative samples in the testing ranking list
 
-max_neighbors(50): the maximum neighbors in our algorithm
+max_neighbors: the maximum neighbors in our algorithm
 
-N_train_negative(4): the number of negative samples in training
+N_train_negative: the number of negative samples in training
 
-embedding_dim(32): the output dimension of MLP
+embedding_dim: the output dimension of MLP
 
-nb_layer(3): the number of layers in MLP
+nb_layer: the number of layers in MLP
 
-nb_epoch(100): training epoch
+nb_epoch: training epoch
 
-LR(0.001): learning rate
+LR: learning rate
 
-================================File Description===========================
+## File Description
 
 01: Process input data: data.csv (userid,itemid)
 
@@ -39,7 +39,24 @@ LR(0.001): learning rate
 
 06: Evaluation of model
 
-Python version: 2.7.3, Keras version：2.1.5, Tensorflow: 1.6.0. 
+The python files are independent to make our project more flexible and extensible. You can tuning parameters and run the corresponding python file that you need.
 
 
-Note: the python files are independent to make our project more flexible and extensible. You can tuning parameters and run the corresponding python file that you need.
+## Requirement
+Python version: 2.7.3
+
+Keras version：2.1.5
+
+Tensorflow: 1.6.0. 
+
+    
+## Please cite our paper if you use this code in your own work:
+
+@inproceedings{bai2017neural,
+  title={A neural collaborative filtering model with interaction-based neighborhood},
+  author={Bai, Ting and Wen, Ji-Rong and Zhang, Jun and Zhao, Wayne Xin},
+  booktitle={Proceedings of the 2017 ACM on Conference on Information and Knowledge Management},
+  pages={1979--1982},
+  year={2017},
+  organization={ACM}
+}
