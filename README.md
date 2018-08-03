@@ -50,14 +50,16 @@ Keras version：2.1.5
 Tensorflow: 1.6.0. 
 
     
-## Please cite our paper if you use this code in your own work:
+## Cite
+
+Please cite our paper if you use this code in your own work:
 
 
-@inproceedings{bai2017neural,
-  title={A neural collaborative filtering model with interaction-based neighborhood},
-  author={Bai, Ting and Wen, Ji-Rong and Zhang, Jun and Zhao, Wayne Xin},
-  booktitle={Proceedings of the 2017 ACM on Conference on Information and Knowledge Management},
-  pages={1979--1982},
-  year={2017},
-  organization={ACM}
+@inproceedings{bai2017neural,<br>
+  title={A neural collaborative filtering model with interaction-based neighborhood},<br>
+  author={Bai, Ting and Wen, Ji-Rong and Zhang, Jun and Zhao, Wayne Xin},<br>
+  booktitle={Proceedings of the 2017 ACM on Conference on Information and Knowledge Management},<br>
+  pages={1979--1982},<br>
+  year={2017},<br>
+  organization={ACM}<br>
 }
