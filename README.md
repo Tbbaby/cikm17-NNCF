@@ -1,4 +1,4 @@
-# NNCF
+# cikm17-NNCF
 Implementation of Neighborhood-based Neural Collaborative Filtering model (NNCF)
 
 Ting Bai et al. "A Neural Collaborative Filtering Model with Interaction-based Neighborhood." Proceedings of the 2017 ACM on Conference on Information and Knowledge Management. ACM, 2017.
