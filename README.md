@@ -52,6 +52,7 @@ Tensorflow: 1.6.0.
     
 ## Please cite our paper if you use this code in your own work:
 
+
 @inproceedings{bai2017neural,
   title={A neural collaborative filtering model with interaction-based neighborhood},
   author={Bai, Ting and Wen, Ji-Rong and Zhang, Jun and Zhao, Wayne Xin},
